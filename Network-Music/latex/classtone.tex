@@ -1,0 +1,227 @@
+\hypertarget{classtone}{\section{tone Class Reference}
+\label{classtone}\index{tone@{tone}}
+}
+
+
+{\ttfamily \#include $<$tone.\-h$>$}
+
+
+
+Collaboration diagram for tone\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classtone__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classtone_a07ecdcbc212bfa5a48db8c4e61edb94d}{On\-Volume\-Changed} (int value)
+\item 
+void \hyperlink{classtone_a622c2c46b44e8325f2961c5b60a1c5af}{Process} ()
+\item 
+void \hyperlink{classtone_add8491d03d8b82453b42a236b111c02a}{Do\-Resume\-Audio} ()
+\item 
+void \hyperlink{classtone_abe84dc57a9c7097d1632dc2f88ab2991}{Do\-Pause\-Audio} ()
+\item 
+void \hyperlink{classtone_aab27a99690337d475f6be5188798c732}{Do\-Start\-Playing} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtone_a55857617243689a5addf2fccb1bfc345}{tone} (int volume\-Percent, int frequency, Q\-Object $\ast$parent)
+\item 
+\hyperlink{classtone_a2c9ba517884577f4ceb2a15be1a1ac1d}{$\sim$tone} ()
+\item 
+void \hyperlink{classtone_ab7c8d92a1041eefbd592f6388c288dc5}{Play} ()
+\item 
+void \hyperlink{classtone_ad06ca335937de129036a7e79a283f3dd}{Pause} ()
+\item 
+void \hyperlink{classtone_a989956fe95107f983464d2ac01b19211}{Set\-Frequency} (qreal value)
+\item 
+void \hyperlink{classtone_a241f1871559d339fbdec300dd20da887}{Set\-Generator} (\hyperlink{class_generator}{Generator} $\ast$gen)
+\item 
+Q\-Audio\-Format \hyperlink{classtone_a6f02a174da735dc0947ac4bf151d9012}{Get\-Format} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_generator}{Generator} $\ast$ \hyperlink{classtone_aa49c08b076903abdbf974444a0efa2b7}{m\-\_\-generator}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Audio\-Device\-Info \hyperlink{classtone_ab3c3b5206828b0629a37174ba3b098b1}{m\-\_\-device}
+\item 
+Q\-Audio\-Output $\ast$ \hyperlink{classtone_a8d4a0b1f0f2a3b05fcd580d29e6c7feb}{m\-\_\-audio\-Output}
+\item 
+Q\-I\-O\-Device $\ast$ \hyperlink{classtone_a97ac901b1b1e269ee5eb719e667485d3}{m\-\_\-output}
+\item 
+Q\-Audio\-Format \hyperlink{classtone_a556b7109c6895b2c5a3d011145a80952}{m\-\_\-format}
+\item 
+Q\-Byte\-Array \hyperlink{classtone_a9f2508fefb9803b27bb08276369e2036}{m\-\_\-buffer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtone_a55857617243689a5addf2fccb1bfc345}{\index{tone@{tone}!tone@{tone}}
+\index{tone@{tone}!tone@{tone}}
+\subsubsection[{tone}]{\setlength{\rightskip}{0pt plus 5cm}tone\-::tone (
+\begin{DoxyParamCaption}
+\item[{int}]{volume\-Percent, }
+\item[{int}]{frequency, }
+\item[{Q\-Object $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}\label{classtone_a55857617243689a5addf2fccb1bfc345}
+Container that manages the audio playing of individual tones \hypertarget{classtone_a2c9ba517884577f4ceb2a15be1a1ac1d}{\index{tone@{tone}!$\sim$tone@{$\sim$tone}}
+\index{$\sim$tone@{$\sim$tone}!tone@{tone}}
+\subsubsection[{$\sim$tone}]{\setlength{\rightskip}{0pt plus 5cm}tone\-::$\sim$tone (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtone_a2c9ba517884577f4ceb2a15be1a1ac1d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtone_abe84dc57a9c7097d1632dc2f88ab2991}{\index{tone@{tone}!Do\-Pause\-Audio@{Do\-Pause\-Audio}}
+\index{Do\-Pause\-Audio@{Do\-Pause\-Audio}!tone@{tone}}
+\subsubsection[{Do\-Pause\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Do\-Pause\-Audio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classtone_abe84dc57a9c7097d1632dc2f88ab2991}
+\hypertarget{classtone_add8491d03d8b82453b42a236b111c02a}{\index{tone@{tone}!Do\-Resume\-Audio@{Do\-Resume\-Audio}}
+\index{Do\-Resume\-Audio@{Do\-Resume\-Audio}!tone@{tone}}
+\subsubsection[{Do\-Resume\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Do\-Resume\-Audio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classtone_add8491d03d8b82453b42a236b111c02a}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classtone_add8491d03d8b82453b42a236b111c02a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classtone_aab27a99690337d475f6be5188798c732}{\index{tone@{tone}!Do\-Start\-Playing@{Do\-Start\-Playing}}
+\index{Do\-Start\-Playing@{Do\-Start\-Playing}!tone@{tone}}
+\subsubsection[{Do\-Start\-Playing}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Do\-Start\-Playing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classtone_aab27a99690337d475f6be5188798c732}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classtone_aab27a99690337d475f6be5188798c732_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classtone_a6f02a174da735dc0947ac4bf151d9012}{\index{tone@{tone}!Get\-Format@{Get\-Format}}
+\index{Get\-Format@{Get\-Format}!tone@{tone}}
+\subsubsection[{Get\-Format}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Audio\-Format tone\-::\-Get\-Format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtone_a6f02a174da735dc0947ac4bf151d9012}
+\hypertarget{classtone_a07ecdcbc212bfa5a48db8c4e61edb94d}{\index{tone@{tone}!On\-Volume\-Changed@{On\-Volume\-Changed}}
+\index{On\-Volume\-Changed@{On\-Volume\-Changed}!tone@{tone}}
+\subsubsection[{On\-Volume\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-On\-Volume\-Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classtone_a07ecdcbc212bfa5a48db8c4e61edb94d}
+\hypertarget{classtone_ad06ca335937de129036a7e79a283f3dd}{\index{tone@{tone}!Pause@{Pause}}
+\index{Pause@{Pause}!tone@{tone}}
+\subsubsection[{Pause}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtone_ad06ca335937de129036a7e79a283f3dd}
+\hypertarget{classtone_ab7c8d92a1041eefbd592f6388c288dc5}{\index{tone@{tone}!Play@{Play}}
+\index{Play@{Play}!tone@{tone}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtone_ab7c8d92a1041eefbd592f6388c288dc5}
+\hypertarget{classtone_a622c2c46b44e8325f2961c5b60a1c5af}{\index{tone@{tone}!Process@{Process}}
+\index{Process@{Process}!tone@{tone}}
+\subsubsection[{Process}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{classtone_a622c2c46b44e8325f2961c5b60a1c5af}
+\hypertarget{classtone_a989956fe95107f983464d2ac01b19211}{\index{tone@{tone}!Set\-Frequency@{Set\-Frequency}}
+\index{Set\-Frequency@{Set\-Frequency}!tone@{tone}}
+\subsubsection[{Set\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Set\-Frequency (
+\begin{DoxyParamCaption}
+\item[{qreal}]{value}
+\end{DoxyParamCaption}
+)}}\label{classtone_a989956fe95107f983464d2ac01b19211}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classtone_a989956fe95107f983464d2ac01b19211_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classtone_a241f1871559d339fbdec300dd20da887}{\index{tone@{tone}!Set\-Generator@{Set\-Generator}}
+\index{Set\-Generator@{Set\-Generator}!tone@{tone}}
+\subsubsection[{Set\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}void tone\-::\-Set\-Generator (
+\begin{DoxyParamCaption}
+\item[{{\bf Generator} $\ast$}]{gen}
+\end{DoxyParamCaption}
+)}}\label{classtone_a241f1871559d339fbdec300dd20da887}
+
+
+Here is the call graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classtone_a241f1871559d339fbdec300dd20da887_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classtone_a8d4a0b1f0f2a3b05fcd580d29e6c7feb}{\index{tone@{tone}!m\-\_\-audio\-Output@{m\-\_\-audio\-Output}}
+\index{m\-\_\-audio\-Output@{m\-\_\-audio\-Output}!tone@{tone}}
+\subsubsection[{m\-\_\-audio\-Output}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Audio\-Output$\ast$ tone\-::m\-\_\-audio\-Output\hspace{0.3cm}{\ttfamily [protected]}}}\label{classtone_a8d4a0b1f0f2a3b05fcd580d29e6c7feb}
+\hypertarget{classtone_a9f2508fefb9803b27bb08276369e2036}{\index{tone@{tone}!m\-\_\-buffer@{m\-\_\-buffer}}
+\index{m\-\_\-buffer@{m\-\_\-buffer}!tone@{tone}}
+\subsubsection[{m\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array tone\-::m\-\_\-buffer\hspace{0.3cm}{\ttfamily [protected]}}}\label{classtone_a9f2508fefb9803b27bb08276369e2036}
+\hypertarget{classtone_ab3c3b5206828b0629a37174ba3b098b1}{\index{tone@{tone}!m\-\_\-device@{m\-\_\-device}}
+\index{m\-\_\-device@{m\-\_\-device}!tone@{tone}}
+\subsubsection[{m\-\_\-device}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Audio\-Device\-Info tone\-::m\-\_\-device\hspace{0.3cm}{\ttfamily [protected]}}}\label{classtone_ab3c3b5206828b0629a37174ba3b098b1}
+\hypertarget{classtone_a556b7109c6895b2c5a3d011145a80952}{\index{tone@{tone}!m\-\_\-format@{m\-\_\-format}}
+\index{m\-\_\-format@{m\-\_\-format}!tone@{tone}}
+\subsubsection[{m\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Audio\-Format tone\-::m\-\_\-format\hspace{0.3cm}{\ttfamily [protected]}}}\label{classtone_a556b7109c6895b2c5a3d011145a80952}
+\hypertarget{classtone_aa49c08b076903abdbf974444a0efa2b7}{\index{tone@{tone}!m\-\_\-generator@{m\-\_\-generator}}
+\index{m\-\_\-generator@{m\-\_\-generator}!tone@{tone}}
+\subsubsection[{m\-\_\-generator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generator}$\ast$ tone\-::m\-\_\-generator}}\label{classtone_aa49c08b076903abdbf974444a0efa2b7}
+\hypertarget{classtone_a97ac901b1b1e269ee5eb719e667485d3}{\index{tone@{tone}!m\-\_\-output@{m\-\_\-output}}
+\index{m\-\_\-output@{m\-\_\-output}!tone@{tone}}
+\subsubsection[{m\-\_\-output}]{\setlength{\rightskip}{0pt plus 5cm}Q\-I\-O\-Device$\ast$ tone\-::m\-\_\-output\hspace{0.3cm}{\ttfamily [protected]}}}\label{classtone_a97ac901b1b1e269ee5eb719e667485d3}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Network-\/\-Music/\hyperlink{tone_8h}{tone.\-h}\item 
+Network-\/\-Music/\hyperlink{tone_8cpp}{tone.\-cpp}\end{DoxyCompactItemize}

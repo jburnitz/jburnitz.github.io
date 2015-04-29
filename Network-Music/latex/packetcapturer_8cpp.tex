@@ -1,0 +1,153 @@
+\hypertarget{packetcapturer_8cpp}{\section{Network-\/\-Music/packetcapturer.cpp File Reference}
+\label{packetcapturer_8cpp}\index{Network-\/\-Music/packetcapturer.\-cpp@{Network-\/\-Music/packetcapturer.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}packetcapturer.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$pcap.\-h$>$}\\*
+{\ttfamily \#include $<$qdebug.\-h$>$}\\*
+{\ttfamily \#include $<$Q\-Application$>$}\\*
+Include dependency graph for packetcapturer.\-cpp\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{packetcapturer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structpacketprocess_1_1sniff__ethernet}{packetprocess\-::sniff\-\_\-ethernet}
+\item 
+struct \hyperlink{structpacketprocess_1_1sniff__ip}{packetprocess\-::sniff\-\_\-ip}
+\item 
+struct \hyperlink{structpacketprocess_1_1sniff__tcp}{packetprocess\-::sniff\-\_\-tcp}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacepacketprocess}{packetprocess}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{packetcapturer_8cpp_ad46b66695494c1720f45142678f354c9}{E\-T\-H\-E\-R\-T\-Y\-P\-E\-\_\-\-E\-A\-P}~(0x888e) /$\ast$ eap authentication $\ast$/
+\item 
+\#define \hyperlink{packetcapturer_8cpp_aa3b2d149485c29b898ac20524edad389}{T\-Y\-P\-E\-\_\-\-T\-C\-P}~(6)
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a895709708f8f909cf7b7459491d549e7}{I\-P\-\_\-\-R\-F}~0x8000		/$\ast$ reserved fragment flag $\ast$/
+\item 
+\#define \hyperlink{packetcapturer_8cpp_ae2473f4a88d141d5298f92a4335b714a}{I\-P\-\_\-\-D\-F}~0x4000		/$\ast$ dont fragment flag $\ast$/
+\item 
+\#define \hyperlink{packetcapturer_8cpp_ae8afe1e04bb9bad791443556c3b2cd73}{I\-P\-\_\-\-M\-F}~0x2000		/$\ast$ more fragments flag $\ast$/
+\item 
+\#define \hyperlink{packetcapturer_8cpp_ad059798b16d1f615b5af8770175121ba}{I\-P\-\_\-\-O\-F\-F\-M\-A\-S\-K}~0x1fff	/$\ast$ mask for fragmenting bits $\ast$/
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a316a88421a4b66af822ec0e097c01f9a}{I\-P\-\_\-\-H\-L}(ip)~(((ip)-\/$>$ip\-\_\-vhl) \& 0x0f)
+\item 
+\#define \hyperlink{packetcapturer_8cpp_ad79fc88954ed6d1ab77e5fde5e23b864}{I\-P\-\_\-\-V}(ip)~(((ip)-\/$>$ip\-\_\-vhl) $>$$>$ 4)
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a040e084a163464aace3da0ab5673f97b}{T\-H\-\_\-\-O\-F\-F}(th)~(((th)-\/$>$th\-\_\-offx2 \& 0xf0) $>$$>$ 4)
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a1cec9b372679734fcd8394d779442ddb}{T\-H\-\_\-\-F\-I\-N}~0x01
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a91006117f7ae427b957773ab0e80bfa4}{T\-H\-\_\-\-S\-Y\-N}~0x02
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a7f2ce15991898c8d3397045087c4381f}{T\-H\-\_\-\-R\-S\-T}~0x04
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a45b9964096064c9a0c84fbddd2c80d38}{T\-H\-\_\-\-P\-U\-S\-H}~0x08
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a362dae974cf06bab2b79b70f0cde524f}{T\-H\-\_\-\-A\-C\-K}~0x10
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a7b18ca973f14696013696a00c5235f32}{T\-H\-\_\-\-U\-R\-G}~0x20
+\item 
+\#define \hyperlink{packetcapturer_8cpp_acb3203940d8aab3eef7dd8ec1e0112db}{T\-H\-\_\-\-E\-C\-E}~0x40
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a427da5535811ecaae82a11869ea9e1d9}{T\-H\-\_\-\-C\-W\-R}~0x80
+\item 
+\#define \hyperlink{packetcapturer_8cpp_a618dec9145afa92eb20e74a97625f754}{T\-H\-\_\-\-F\-L\-A\-G\-S}~(\hyperlink{packetcapturer_8cpp_a1cec9b372679734fcd8394d779442ddb}{T\-H\-\_\-\-F\-I\-N}$|$\hyperlink{packetcapturer_8cpp_a91006117f7ae427b957773ab0e80bfa4}{T\-H\-\_\-\-S\-Y\-N}$|$\hyperlink{packetcapturer_8cpp_a7f2ce15991898c8d3397045087c4381f}{T\-H\-\_\-\-R\-S\-T}$|$\hyperlink{packetcapturer_8cpp_a362dae974cf06bab2b79b70f0cde524f}{T\-H\-\_\-\-A\-C\-K}$|$\hyperlink{packetcapturer_8cpp_a7b18ca973f14696013696a00c5235f32}{T\-H\-\_\-\-U\-R\-G}$|$\hyperlink{packetcapturer_8cpp_acb3203940d8aab3eef7dd8ec1e0112db}{T\-H\-\_\-\-E\-C\-E}$|$\hyperlink{packetcapturer_8cpp_a427da5535811ecaae82a11869ea9e1d9}{T\-H\-\_\-\-C\-W\-R})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef u\-\_\-int \hyperlink{namespacepacketprocess_a18e81a7f74513cbc9f8881ee72f67abe}{packetprocess\-::tcp\-\_\-seq}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacepacketprocess_a17240af943c2d732bb5242e802445a5f}{packetprocess\-::\-Callback\-\_\-\-Process\-Packet} (u\-\_\-char $\ast$useless, const pcap\-\_\-pkthdr $\ast$pkthdr, const u\-\_\-char $\ast$packet)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+u\-\_\-short \hyperlink{namespacepacketprocess_a0ffda1e178a79656e927189b103e8708}{packetprocess\-::recent\-Freq} = 100
+\item 
+Q\-Object $\ast$ \hyperlink{namespacepacketprocess_ad98eea621960299d54ed1535bf3a605e}{packetprocess\-::parent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{packetcapturer_8cpp_ad46b66695494c1720f45142678f354c9}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!E\-T\-H\-E\-R\-T\-Y\-P\-E\-\_\-\-E\-A\-P@{E\-T\-H\-E\-R\-T\-Y\-P\-E\-\_\-\-E\-A\-P}}
+\index{E\-T\-H\-E\-R\-T\-Y\-P\-E\-\_\-\-E\-A\-P@{E\-T\-H\-E\-R\-T\-Y\-P\-E\-\_\-\-E\-A\-P}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{E\-T\-H\-E\-R\-T\-Y\-P\-E\-\_\-\-E\-A\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-T\-H\-E\-R\-T\-Y\-P\-E\-\_\-\-E\-A\-P~(0x888e) /$\ast$ eap authentication $\ast$/}}\label{packetcapturer_8cpp_ad46b66695494c1720f45142678f354c9}
+\hypertarget{packetcapturer_8cpp_ae2473f4a88d141d5298f92a4335b714a}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!I\-P\-\_\-\-D\-F@{I\-P\-\_\-\-D\-F}}
+\index{I\-P\-\_\-\-D\-F@{I\-P\-\_\-\-D\-F}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{I\-P\-\_\-\-D\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-P\-\_\-\-D\-F~0x4000		/$\ast$ dont fragment flag $\ast$/}}\label{packetcapturer_8cpp_ae2473f4a88d141d5298f92a4335b714a}
+\hypertarget{packetcapturer_8cpp_a316a88421a4b66af822ec0e097c01f9a}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!I\-P\-\_\-\-H\-L@{I\-P\-\_\-\-H\-L}}
+\index{I\-P\-\_\-\-H\-L@{I\-P\-\_\-\-H\-L}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{I\-P\-\_\-\-H\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-P\-\_\-\-H\-L(
+\begin{DoxyParamCaption}
+\item[{}]{ip}
+\end{DoxyParamCaption}
+)~(((ip)-\/$>$ip\-\_\-vhl) \& 0x0f)}}\label{packetcapturer_8cpp_a316a88421a4b66af822ec0e097c01f9a}
+\hypertarget{packetcapturer_8cpp_ae8afe1e04bb9bad791443556c3b2cd73}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!I\-P\-\_\-\-M\-F@{I\-P\-\_\-\-M\-F}}
+\index{I\-P\-\_\-\-M\-F@{I\-P\-\_\-\-M\-F}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{I\-P\-\_\-\-M\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-P\-\_\-\-M\-F~0x2000		/$\ast$ more fragments flag $\ast$/}}\label{packetcapturer_8cpp_ae8afe1e04bb9bad791443556c3b2cd73}
+\hypertarget{packetcapturer_8cpp_ad059798b16d1f615b5af8770175121ba}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!I\-P\-\_\-\-O\-F\-F\-M\-A\-S\-K@{I\-P\-\_\-\-O\-F\-F\-M\-A\-S\-K}}
+\index{I\-P\-\_\-\-O\-F\-F\-M\-A\-S\-K@{I\-P\-\_\-\-O\-F\-F\-M\-A\-S\-K}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{I\-P\-\_\-\-O\-F\-F\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-P\-\_\-\-O\-F\-F\-M\-A\-S\-K~0x1fff	/$\ast$ mask for fragmenting bits $\ast$/}}\label{packetcapturer_8cpp_ad059798b16d1f615b5af8770175121ba}
+\hypertarget{packetcapturer_8cpp_a895709708f8f909cf7b7459491d549e7}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!I\-P\-\_\-\-R\-F@{I\-P\-\_\-\-R\-F}}
+\index{I\-P\-\_\-\-R\-F@{I\-P\-\_\-\-R\-F}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{I\-P\-\_\-\-R\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-P\-\_\-\-R\-F~0x8000		/$\ast$ reserved fragment flag $\ast$/}}\label{packetcapturer_8cpp_a895709708f8f909cf7b7459491d549e7}
+\hypertarget{packetcapturer_8cpp_ad79fc88954ed6d1ab77e5fde5e23b864}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!I\-P\-\_\-\-V@{I\-P\-\_\-\-V}}
+\index{I\-P\-\_\-\-V@{I\-P\-\_\-\-V}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{I\-P\-\_\-\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-P\-\_\-\-V(
+\begin{DoxyParamCaption}
+\item[{}]{ip}
+\end{DoxyParamCaption}
+)~(((ip)-\/$>$ip\-\_\-vhl) $>$$>$ 4)}}\label{packetcapturer_8cpp_ad79fc88954ed6d1ab77e5fde5e23b864}
+\hypertarget{packetcapturer_8cpp_a362dae974cf06bab2b79b70f0cde524f}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-A\-C\-K@{T\-H\-\_\-\-A\-C\-K}}
+\index{T\-H\-\_\-\-A\-C\-K@{T\-H\-\_\-\-A\-C\-K}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-A\-C\-K~0x10}}\label{packetcapturer_8cpp_a362dae974cf06bab2b79b70f0cde524f}
+\hypertarget{packetcapturer_8cpp_a427da5535811ecaae82a11869ea9e1d9}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-C\-W\-R@{T\-H\-\_\-\-C\-W\-R}}
+\index{T\-H\-\_\-\-C\-W\-R@{T\-H\-\_\-\-C\-W\-R}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-C\-W\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-C\-W\-R~0x80}}\label{packetcapturer_8cpp_a427da5535811ecaae82a11869ea9e1d9}
+\hypertarget{packetcapturer_8cpp_acb3203940d8aab3eef7dd8ec1e0112db}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-E\-C\-E@{T\-H\-\_\-\-E\-C\-E}}
+\index{T\-H\-\_\-\-E\-C\-E@{T\-H\-\_\-\-E\-C\-E}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-E\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-E\-C\-E~0x40}}\label{packetcapturer_8cpp_acb3203940d8aab3eef7dd8ec1e0112db}
+\hypertarget{packetcapturer_8cpp_a1cec9b372679734fcd8394d779442ddb}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-F\-I\-N@{T\-H\-\_\-\-F\-I\-N}}
+\index{T\-H\-\_\-\-F\-I\-N@{T\-H\-\_\-\-F\-I\-N}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-F\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-F\-I\-N~0x01}}\label{packetcapturer_8cpp_a1cec9b372679734fcd8394d779442ddb}
+\hypertarget{packetcapturer_8cpp_a618dec9145afa92eb20e74a97625f754}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-F\-L\-A\-G\-S@{T\-H\-\_\-\-F\-L\-A\-G\-S}}
+\index{T\-H\-\_\-\-F\-L\-A\-G\-S@{T\-H\-\_\-\-F\-L\-A\-G\-S}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-F\-L\-A\-G\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-F\-L\-A\-G\-S~({\bf T\-H\-\_\-\-F\-I\-N}$|${\bf T\-H\-\_\-\-S\-Y\-N}$|${\bf T\-H\-\_\-\-R\-S\-T}$|${\bf T\-H\-\_\-\-A\-C\-K}$|${\bf T\-H\-\_\-\-U\-R\-G}$|${\bf T\-H\-\_\-\-E\-C\-E}$|${\bf T\-H\-\_\-\-C\-W\-R})}}\label{packetcapturer_8cpp_a618dec9145afa92eb20e74a97625f754}
+\hypertarget{packetcapturer_8cpp_a040e084a163464aace3da0ab5673f97b}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-O\-F\-F@{T\-H\-\_\-\-O\-F\-F}}
+\index{T\-H\-\_\-\-O\-F\-F@{T\-H\-\_\-\-O\-F\-F}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-O\-F\-F(
+\begin{DoxyParamCaption}
+\item[{}]{th}
+\end{DoxyParamCaption}
+)~(((th)-\/$>$th\-\_\-offx2 \& 0xf0) $>$$>$ 4)}}\label{packetcapturer_8cpp_a040e084a163464aace3da0ab5673f97b}
+\hypertarget{packetcapturer_8cpp_a45b9964096064c9a0c84fbddd2c80d38}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-P\-U\-S\-H@{T\-H\-\_\-\-P\-U\-S\-H}}
+\index{T\-H\-\_\-\-P\-U\-S\-H@{T\-H\-\_\-\-P\-U\-S\-H}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-P\-U\-S\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-P\-U\-S\-H~0x08}}\label{packetcapturer_8cpp_a45b9964096064c9a0c84fbddd2c80d38}
+\hypertarget{packetcapturer_8cpp_a7f2ce15991898c8d3397045087c4381f}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-R\-S\-T@{T\-H\-\_\-\-R\-S\-T}}
+\index{T\-H\-\_\-\-R\-S\-T@{T\-H\-\_\-\-R\-S\-T}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-R\-S\-T~0x04}}\label{packetcapturer_8cpp_a7f2ce15991898c8d3397045087c4381f}
+\hypertarget{packetcapturer_8cpp_a91006117f7ae427b957773ab0e80bfa4}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-S\-Y\-N@{T\-H\-\_\-\-S\-Y\-N}}
+\index{T\-H\-\_\-\-S\-Y\-N@{T\-H\-\_\-\-S\-Y\-N}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-S\-Y\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-S\-Y\-N~0x02}}\label{packetcapturer_8cpp_a91006117f7ae427b957773ab0e80bfa4}
+\hypertarget{packetcapturer_8cpp_a7b18ca973f14696013696a00c5235f32}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-H\-\_\-\-U\-R\-G@{T\-H\-\_\-\-U\-R\-G}}
+\index{T\-H\-\_\-\-U\-R\-G@{T\-H\-\_\-\-U\-R\-G}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-H\-\_\-\-U\-R\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-H\-\_\-\-U\-R\-G~0x20}}\label{packetcapturer_8cpp_a7b18ca973f14696013696a00c5235f32}
+\hypertarget{packetcapturer_8cpp_aa3b2d149485c29b898ac20524edad389}{\index{packetcapturer.\-cpp@{packetcapturer.\-cpp}!T\-Y\-P\-E\-\_\-\-T\-C\-P@{T\-Y\-P\-E\-\_\-\-T\-C\-P}}
+\index{T\-Y\-P\-E\-\_\-\-T\-C\-P@{T\-Y\-P\-E\-\_\-\-T\-C\-P}!packetcapturer.cpp@{packetcapturer.\-cpp}}
+\subsubsection[{T\-Y\-P\-E\-\_\-\-T\-C\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-Y\-P\-E\-\_\-\-T\-C\-P~(6)}}\label{packetcapturer_8cpp_aa3b2d149485c29b898ac20524edad389}

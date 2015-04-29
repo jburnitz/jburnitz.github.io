@@ -1,0 +1,191 @@
+\hypertarget{class_generator}{\section{Generator Class Reference}
+\label{class_generator}\index{Generator@{Generator}}
+}
+
+
+{\ttfamily \#include $<$generator.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_generator_ac70583c21208d97c0474d9ab23f69a2b}{Generator} (const Q\-Audio\-Format \&format, qint64 duration\-Us, int sample\-Rate, Q\-Object $\ast$parent)
+\item 
+\hyperlink{class_generator_acc85fbe22690003267ba899bacf777d1}{$\sim$\-Generator} ()
+\item 
+void \hyperlink{class_generator_a3f0bc6d7fed7eaf8d497d3e50149982b}{start} ()
+\item 
+void \hyperlink{class_generator_a698e9aa26989e005a709c297ebea3492}{stop} ()
+\item 
+void \hyperlink{class_generator_a54a730f69fe887837f3f83080e32201f}{set\-Frequency} (int value)
+\item 
+qint64 \hyperlink{class_generator_ada073b90efc5104c049eef04844c8801}{Get\-Pos} ()
+\item 
+void \hyperlink{class_generator_a9aa165c8eca0883e9792d63153701f49}{Set\-Pos} (qint64 val)
+\item 
+qint64 \hyperlink{class_generator_ac818d4583f77c0f29bbeafbb31995ff8}{read\-Data} (char $\ast$data, qint64 maxlen)
+\item 
+qint64 \hyperlink{class_generator_a16d82d88527ec5a0be4052b13d63417a}{write\-Data} (const char $\ast$data, qint64 len)
+\item 
+qint64 \hyperlink{class_generator_ab06a2f7a10bdcf3edd3fd0a11ac6d53f}{bytes\-Available} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\-Byte\-Array $\ast$ \hyperlink{class_generator_abaee73437c469e40bf5d7c0c15bdc48f}{Generate\-Data} (const Q\-Audio\-Format \&format, qint64 frequency)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Byte\-Array $\ast$ \hyperlink{class_generator_ac7d96c5f663351ce95f3e1cf9a862e00}{m\-\_\-buffer}
+\item 
+qint64 \hyperlink{class_generator_aa718042777706f4e9ee2ab302d0e4071}{m\-\_\-pos}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_generator_ac70583c21208d97c0474d9ab23f69a2b}{\index{Generator@{Generator}!Generator@{Generator}}
+\index{Generator@{Generator}!Generator@{Generator}}
+\subsubsection[{Generator}]{\setlength{\rightskip}{0pt plus 5cm}Generator\-::\-Generator (
+\begin{DoxyParamCaption}
+\item[{const Q\-Audio\-Format \&}]{format, }
+\item[{qint64}]{duration\-Us, }
+\item[{int}]{sample\-Rate, }
+\item[{Q\-Object $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}}\label{class_generator_ac70583c21208d97c0474d9ab23f69a2b}
+Acts as a file type device to get audio from \hypertarget{class_generator_acc85fbe22690003267ba899bacf777d1}{\index{Generator@{Generator}!$\sim$\-Generator@{$\sim$\-Generator}}
+\index{$\sim$\-Generator@{$\sim$\-Generator}!Generator@{Generator}}
+\subsubsection[{$\sim$\-Generator}]{\setlength{\rightskip}{0pt plus 5cm}Generator\-::$\sim$\-Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_generator_acc85fbe22690003267ba899bacf777d1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_generator_ab06a2f7a10bdcf3edd3fd0a11ac6d53f}{\index{Generator@{Generator}!bytes\-Available@{bytes\-Available}}
+\index{bytes\-Available@{bytes\-Available}!Generator@{Generator}}
+\subsubsection[{bytes\-Available}]{\setlength{\rightskip}{0pt plus 5cm}qint64 Generator\-::bytes\-Available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_generator_ab06a2f7a10bdcf3edd3fd0a11ac6d53f}
+\hypertarget{class_generator_abaee73437c469e40bf5d7c0c15bdc48f}{\index{Generator@{Generator}!Generate\-Data@{Generate\-Data}}
+\index{Generate\-Data@{Generate\-Data}!Generator@{Generator}}
+\subsubsection[{Generate\-Data}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array $\ast$ Generator\-::\-Generate\-Data (
+\begin{DoxyParamCaption}
+\item[{const Q\-Audio\-Format \&}]{format, }
+\item[{qint64}]{frequency}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_generator_abaee73437c469e40bf5d7c0c15bdc48f}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_generator_abaee73437c469e40bf5d7c0c15bdc48f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_generator_ada073b90efc5104c049eef04844c8801}{\index{Generator@{Generator}!Get\-Pos@{Get\-Pos}}
+\index{Get\-Pos@{Get\-Pos}!Generator@{Generator}}
+\subsubsection[{Get\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}qint64 Generator\-::\-Get\-Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_generator_ada073b90efc5104c049eef04844c8801}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_generator_ada073b90efc5104c049eef04844c8801_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_generator_ac818d4583f77c0f29bbeafbb31995ff8}{\index{Generator@{Generator}!read\-Data@{read\-Data}}
+\index{read\-Data@{read\-Data}!Generator@{Generator}}
+\subsubsection[{read\-Data}]{\setlength{\rightskip}{0pt plus 5cm}qint64 Generator\-::read\-Data (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{data, }
+\item[{qint64}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{class_generator_ac818d4583f77c0f29bbeafbb31995ff8}
+\hypertarget{class_generator_a54a730f69fe887837f3f83080e32201f}{\index{Generator@{Generator}!set\-Frequency@{set\-Frequency}}
+\index{set\-Frequency@{set\-Frequency}!Generator@{Generator}}
+\subsubsection[{set\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\-::set\-Frequency (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a54a730f69fe887837f3f83080e32201f}
+\hypertarget{class_generator_a9aa165c8eca0883e9792d63153701f49}{\index{Generator@{Generator}!Set\-Pos@{Set\-Pos}}
+\index{Set\-Pos@{Set\-Pos}!Generator@{Generator}}
+\subsubsection[{Set\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\-::\-Set\-Pos (
+\begin{DoxyParamCaption}
+\item[{qint64}]{val}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a9aa165c8eca0883e9792d63153701f49}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_generator_a9aa165c8eca0883e9792d63153701f49_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_generator_a3f0bc6d7fed7eaf8d497d3e50149982b}{\index{Generator@{Generator}!start@{start}}
+\index{start@{start}!Generator@{Generator}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\-::start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a3f0bc6d7fed7eaf8d497d3e50149982b}
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{class_generator_a3f0bc6d7fed7eaf8d497d3e50149982b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_generator_a698e9aa26989e005a709c297ebea3492}{\index{Generator@{Generator}!stop@{stop}}
+\index{stop@{stop}!Generator@{Generator}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void Generator\-::stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a698e9aa26989e005a709c297ebea3492}
+\hypertarget{class_generator_a16d82d88527ec5a0be4052b13d63417a}{\index{Generator@{Generator}!write\-Data@{write\-Data}}
+\index{write\-Data@{write\-Data}!Generator@{Generator}}
+\subsubsection[{write\-Data}]{\setlength{\rightskip}{0pt plus 5cm}qint64 Generator\-::write\-Data (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{qint64}]{len}
+\end{DoxyParamCaption}
+)}}\label{class_generator_a16d82d88527ec5a0be4052b13d63417a}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_generator_ac7d96c5f663351ce95f3e1cf9a862e00}{\index{Generator@{Generator}!m\-\_\-buffer@{m\-\_\-buffer}}
+\index{m\-\_\-buffer@{m\-\_\-buffer}!Generator@{Generator}}
+\subsubsection[{m\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array$\ast$ Generator\-::m\-\_\-buffer}}\label{class_generator_ac7d96c5f663351ce95f3e1cf9a862e00}
+\hypertarget{class_generator_aa718042777706f4e9ee2ab302d0e4071}{\index{Generator@{Generator}!m\-\_\-pos@{m\-\_\-pos}}
+\index{m\-\_\-pos@{m\-\_\-pos}!Generator@{Generator}}
+\subsubsection[{m\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}qint64 Generator\-::m\-\_\-pos}}\label{class_generator_aa718042777706f4e9ee2ab302d0e4071}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Network-\/\-Music/\hyperlink{generator_8h}{generator.\-h}\item 
+Network-\/\-Music/\hyperlink{generator_8cpp}{generator.\-cpp}\end{DoxyCompactItemize}

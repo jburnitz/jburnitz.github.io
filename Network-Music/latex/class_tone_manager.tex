@@ -1,0 +1,304 @@
+\hypertarget{class_tone_manager}{\section{Tone\-Manager Class Reference}
+\label{class_tone_manager}\index{Tone\-Manager@{Tone\-Manager}}
+}
+
+
+{\ttfamily \#include $<$tonemanager.\-h$>$}
+
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tone_manager_a4491c3853b267e69d839e5d07db6c65f}{S\-L\-O\-T\-\_\-\-Number\-Of\-Tones\-Changed} (int new\-Number\-Of\-Tones)
+\item 
+void \hyperlink{class_tone_manager_af3235b97bd5eb323707df906c2057194}{S\-L\-O\-T\-\_\-\-Volume\-Changed} (int new\-Volume)
+\item 
+void \hyperlink{class_tone_manager_a012e94dca7cfd276a5d84d79c9d8564d}{S\-L\-O\-T\-\_\-\-Set\-Frequency} (int frequency, int often)
+\item 
+void \hyperlink{class_tone_manager_a9b7baa7bd7d8b3a25dc37c700439dfff}{S\-L\-O\-T\-\_\-\-Set\-Base\-Frequency} (int base\-Frequency)
+\item 
+void \hyperlink{class_tone_manager_a2de4f382875c53549d203e37c03a1b5c}{S\-L\-O\-T\-\_\-\-Initialize\-Tones} ()
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tone_manager_a350057c72bfef92eafd78fcf663a4780}{Set\-\_\-\-Volume} (int)
+\item 
+void \hyperlink{class_tone_manager_adef20253e76dd81cb8b730a04a4c611d}{Resume\-\_\-\-Audio} ()
+\item 
+void \hyperlink{class_tone_manager_a1585c35147c628bffcca0683d87e9275}{Pause\-\_\-\-Audio} ()
+\item 
+void \hyperlink{class_tone_manager_a9c6253effbaab4dca2b087bc4ab88598}{Start\-\_\-\-Audio} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tone_manager_a8638f3e1194ff8745c867e32b4da6c9b}{Tone\-Manager} ()
+\item 
+\hyperlink{class_tone_manager_adce76ae3f2ae844fbed2c56a3100a3c9}{Tone\-Manager} (int Base\-Number\-Of\-Tones)
+\item 
+\hyperlink{class_tone_manager_ae244662cb3d420d41e3f0a178b5cdfdf}{$\sim$\-Tone\-Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_tone_object}{Tone\-Object} $\ast$ \hyperlink{class_tone_manager_a5145a5a45c5b673c0301550285a04b61}{Add\-Tone} (int i)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_tone_manager_ab5c9a0920466d82f885472f6b00d8874}{number\-Of\-Tones}
+\item 
+int \hyperlink{class_tone_manager_af00d6b668bdb26c6f2945495f6ef65c5}{current\-Tone}
+\item 
+int \hyperlink{class_tone_manager_a1a3f2a72be83f2e28766f72bc5b10222}{current\-Uncommon\-Tone}
+\item 
+int \hyperlink{class_tone_manager_a13b80ecf3d51ae30210fbe99c5bb2863}{tone\-Base\-Frequency}
+\item 
+Q\-Audio\-Format \hyperlink{class_tone_manager_ac3ffa52adeeacd270c60845052acf277}{m\-\_\-format}
+\item 
+Q\-Hash$<$ int, Q\-Byte\-Array $\ast$ $>$ \hyperlink{class_tone_manager_a7f2598af2eb46a6a9ee99bad59aa6db8}{tone\-Buffers}
+\item 
+Q\-List$<$ \hyperlink{struct_tone_object}{Tone\-Object} $\ast$ $>$ \hyperlink{class_tone_manager_a237856f80ab73ae89e32f59f6962ed41}{Tones}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class that acts as the controller to the tones 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tone_manager_a8638f3e1194ff8745c867e32b4da6c9b}{\index{Tone\-Manager@{Tone\-Manager}!Tone\-Manager@{Tone\-Manager}}
+\index{Tone\-Manager@{Tone\-Manager}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Tone\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tone\-Manager\-::\-Tone\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tone_manager_a8638f3e1194ff8745c867e32b4da6c9b}
+\hypertarget{class_tone_manager_adce76ae3f2ae844fbed2c56a3100a3c9}{\index{Tone\-Manager@{Tone\-Manager}!Tone\-Manager@{Tone\-Manager}}
+\index{Tone\-Manager@{Tone\-Manager}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Tone\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tone\-Manager\-::\-Tone\-Manager (
+\begin{DoxyParamCaption}
+\item[{int}]{Base\-Number\-Of\-Tones = {\ttfamily {\bf T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T}}}
+\end{DoxyParamCaption}
+)}}\label{class_tone_manager_adce76ae3f2ae844fbed2c56a3100a3c9}
+\hypertarget{class_tone_manager_ae244662cb3d420d41e3f0a178b5cdfdf}{\index{Tone\-Manager@{Tone\-Manager}!$\sim$\-Tone\-Manager@{$\sim$\-Tone\-Manager}}
+\index{$\sim$\-Tone\-Manager@{$\sim$\-Tone\-Manager}!ToneManager@{Tone\-Manager}}
+\subsubsection[{$\sim$\-Tone\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Tone\-Manager\-::$\sim$\-Tone\-Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tone_manager_ae244662cb3d420d41e3f0a178b5cdfdf}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tone_manager_a5145a5a45c5b673c0301550285a04b61}{\index{Tone\-Manager@{Tone\-Manager}!Add\-Tone@{Add\-Tone}}
+\index{Add\-Tone@{Add\-Tone}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Add\-Tone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tone\-Object} $\ast$ Tone\-Manager\-::\-Add\-Tone (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_a5145a5a45c5b673c0301550285a04b61}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_a5145a5a45c5b673c0301550285a04b61_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_a1585c35147c628bffcca0683d87e9275}{\index{Tone\-Manager@{Tone\-Manager}!Pause\-\_\-\-Audio@{Pause\-\_\-\-Audio}}
+\index{Pause\-\_\-\-Audio@{Pause\-\_\-\-Audio}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Pause\-\_\-\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-Pause\-\_\-\-Audio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_tone_manager_a1585c35147c628bffcca0683d87e9275}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_a1585c35147c628bffcca0683d87e9275_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_adef20253e76dd81cb8b730a04a4c611d}{\index{Tone\-Manager@{Tone\-Manager}!Resume\-\_\-\-Audio@{Resume\-\_\-\-Audio}}
+\index{Resume\-\_\-\-Audio@{Resume\-\_\-\-Audio}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Resume\-\_\-\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-Resume\-\_\-\-Audio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_tone_manager_adef20253e76dd81cb8b730a04a4c611d}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_adef20253e76dd81cb8b730a04a4c611d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_a350057c72bfef92eafd78fcf663a4780}{\index{Tone\-Manager@{Tone\-Manager}!Set\-\_\-\-Volume@{Set\-\_\-\-Volume}}
+\index{Set\-\_\-\-Volume@{Set\-\_\-\-Volume}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Set\-\_\-\-Volume}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-Set\-\_\-\-Volume (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_tone_manager_a350057c72bfef92eafd78fcf663a4780}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_a350057c72bfef92eafd78fcf663a4780_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_a2de4f382875c53549d203e37c03a1b5c}{\index{Tone\-Manager@{Tone\-Manager}!S\-L\-O\-T\-\_\-\-Initialize\-Tones@{S\-L\-O\-T\-\_\-\-Initialize\-Tones}}
+\index{S\-L\-O\-T\-\_\-\-Initialize\-Tones@{S\-L\-O\-T\-\_\-\-Initialize\-Tones}!ToneManager@{Tone\-Manager}}
+\subsubsection[{S\-L\-O\-T\-\_\-\-Initialize\-Tones}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-S\-L\-O\-T\-\_\-\-Initialize\-Tones (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_tone_manager_a2de4f382875c53549d203e37c03a1b5c}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_a2de4f382875c53549d203e37c03a1b5c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_a4491c3853b267e69d839e5d07db6c65f}{\index{Tone\-Manager@{Tone\-Manager}!S\-L\-O\-T\-\_\-\-Number\-Of\-Tones\-Changed@{S\-L\-O\-T\-\_\-\-Number\-Of\-Tones\-Changed}}
+\index{S\-L\-O\-T\-\_\-\-Number\-Of\-Tones\-Changed@{S\-L\-O\-T\-\_\-\-Number\-Of\-Tones\-Changed}!ToneManager@{Tone\-Manager}}
+\subsubsection[{S\-L\-O\-T\-\_\-\-Number\-Of\-Tones\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-S\-L\-O\-T\-\_\-\-Number\-Of\-Tones\-Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{new\-Number\-Of\-Tones}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_tone_manager_a4491c3853b267e69d839e5d07db6c65f}
+Very clunky 
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_a4491c3853b267e69d839e5d07db6c65f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_a9b7baa7bd7d8b3a25dc37c700439dfff}{\index{Tone\-Manager@{Tone\-Manager}!S\-L\-O\-T\-\_\-\-Set\-Base\-Frequency@{S\-L\-O\-T\-\_\-\-Set\-Base\-Frequency}}
+\index{S\-L\-O\-T\-\_\-\-Set\-Base\-Frequency@{S\-L\-O\-T\-\_\-\-Set\-Base\-Frequency}!ToneManager@{Tone\-Manager}}
+\subsubsection[{S\-L\-O\-T\-\_\-\-Set\-Base\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-S\-L\-O\-T\-\_\-\-Set\-Base\-Frequency (
+\begin{DoxyParamCaption}
+\item[{int}]{base\-Frequency}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_tone_manager_a9b7baa7bd7d8b3a25dc37c700439dfff}
+\hypertarget{class_tone_manager_a012e94dca7cfd276a5d84d79c9d8564d}{\index{Tone\-Manager@{Tone\-Manager}!S\-L\-O\-T\-\_\-\-Set\-Frequency@{S\-L\-O\-T\-\_\-\-Set\-Frequency}}
+\index{S\-L\-O\-T\-\_\-\-Set\-Frequency@{S\-L\-O\-T\-\_\-\-Set\-Frequency}!ToneManager@{Tone\-Manager}}
+\subsubsection[{S\-L\-O\-T\-\_\-\-Set\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-S\-L\-O\-T\-\_\-\-Set\-Frequency (
+\begin{DoxyParamCaption}
+\item[{int}]{frequency, }
+\item[{int}]{often}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_tone_manager_a012e94dca7cfd276a5d84d79c9d8564d}
+\begin{DoxyAttention}{Attention}
+modify the frequency for \char`\"{}niceness\char`\"{} 
+\end{DoxyAttention}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_a012e94dca7cfd276a5d84d79c9d8564d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_af3235b97bd5eb323707df906c2057194}{\index{Tone\-Manager@{Tone\-Manager}!S\-L\-O\-T\-\_\-\-Volume\-Changed@{S\-L\-O\-T\-\_\-\-Volume\-Changed}}
+\index{S\-L\-O\-T\-\_\-\-Volume\-Changed@{S\-L\-O\-T\-\_\-\-Volume\-Changed}!ToneManager@{Tone\-Manager}}
+\subsubsection[{S\-L\-O\-T\-\_\-\-Volume\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-S\-L\-O\-T\-\_\-\-Volume\-Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{new\-Volume}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}}\label{class_tone_manager_af3235b97bd5eb323707df906c2057194}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_af3235b97bd5eb323707df906c2057194_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_tone_manager_a9c6253effbaab4dca2b087bc4ab88598}{\index{Tone\-Manager@{Tone\-Manager}!Start\-\_\-\-Audio@{Start\-\_\-\-Audio}}
+\index{Start\-\_\-\-Audio@{Start\-\_\-\-Audio}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Start\-\_\-\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}void Tone\-Manager\-::\-Start\-\_\-\-Audio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_tone_manager_a9c6253effbaab4dca2b087bc4ab88598}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tone_manager_a9c6253effbaab4dca2b087bc4ab88598_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_tone_manager_af00d6b668bdb26c6f2945495f6ef65c5}{\index{Tone\-Manager@{Tone\-Manager}!current\-Tone@{current\-Tone}}
+\index{current\-Tone@{current\-Tone}!ToneManager@{Tone\-Manager}}
+\subsubsection[{current\-Tone}]{\setlength{\rightskip}{0pt plus 5cm}int Tone\-Manager\-::current\-Tone\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_af00d6b668bdb26c6f2945495f6ef65c5}
+\hypertarget{class_tone_manager_a1a3f2a72be83f2e28766f72bc5b10222}{\index{Tone\-Manager@{Tone\-Manager}!current\-Uncommon\-Tone@{current\-Uncommon\-Tone}}
+\index{current\-Uncommon\-Tone@{current\-Uncommon\-Tone}!ToneManager@{Tone\-Manager}}
+\subsubsection[{current\-Uncommon\-Tone}]{\setlength{\rightskip}{0pt plus 5cm}int Tone\-Manager\-::current\-Uncommon\-Tone\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_a1a3f2a72be83f2e28766f72bc5b10222}
+\hypertarget{class_tone_manager_ac3ffa52adeeacd270c60845052acf277}{\index{Tone\-Manager@{Tone\-Manager}!m\-\_\-format@{m\-\_\-format}}
+\index{m\-\_\-format@{m\-\_\-format}!ToneManager@{Tone\-Manager}}
+\subsubsection[{m\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Audio\-Format Tone\-Manager\-::m\-\_\-format\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_ac3ffa52adeeacd270c60845052acf277}
+\hypertarget{class_tone_manager_ab5c9a0920466d82f885472f6b00d8874}{\index{Tone\-Manager@{Tone\-Manager}!number\-Of\-Tones@{number\-Of\-Tones}}
+\index{number\-Of\-Tones@{number\-Of\-Tones}!ToneManager@{Tone\-Manager}}
+\subsubsection[{number\-Of\-Tones}]{\setlength{\rightskip}{0pt plus 5cm}int Tone\-Manager\-::number\-Of\-Tones\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_ab5c9a0920466d82f885472f6b00d8874}
+\hypertarget{class_tone_manager_a13b80ecf3d51ae30210fbe99c5bb2863}{\index{Tone\-Manager@{Tone\-Manager}!tone\-Base\-Frequency@{tone\-Base\-Frequency}}
+\index{tone\-Base\-Frequency@{tone\-Base\-Frequency}!ToneManager@{Tone\-Manager}}
+\subsubsection[{tone\-Base\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}int Tone\-Manager\-::tone\-Base\-Frequency\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_a13b80ecf3d51ae30210fbe99c5bb2863}
+\hypertarget{class_tone_manager_a7f2598af2eb46a6a9ee99bad59aa6db8}{\index{Tone\-Manager@{Tone\-Manager}!tone\-Buffers@{tone\-Buffers}}
+\index{tone\-Buffers@{tone\-Buffers}!ToneManager@{Tone\-Manager}}
+\subsubsection[{tone\-Buffers}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Hash$<$int, Q\-Byte\-Array$\ast$$>$ Tone\-Manager\-::tone\-Buffers\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_a7f2598af2eb46a6a9ee99bad59aa6db8}
+\hypertarget{class_tone_manager_a237856f80ab73ae89e32f59f6962ed41}{\index{Tone\-Manager@{Tone\-Manager}!Tones@{Tones}}
+\index{Tones@{Tones}!ToneManager@{Tone\-Manager}}
+\subsubsection[{Tones}]{\setlength{\rightskip}{0pt plus 5cm}Q\-List$<${\bf Tone\-Object}$\ast$$>$ Tone\-Manager\-::\-Tones\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_tone_manager_a237856f80ab73ae89e32f59f6962ed41}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Network-\/\-Music/\hyperlink{tonemanager_8h}{tonemanager.\-h}\item 
+Network-\/\-Music/\hyperlink{tonemanager_8cpp}{tonemanager.\-cpp}\end{DoxyCompactItemize}

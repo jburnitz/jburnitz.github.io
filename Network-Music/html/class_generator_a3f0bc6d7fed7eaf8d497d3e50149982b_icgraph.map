@@ -1,0 +1,5 @@
+<map id="Generator::start" name="Generator::start">
+<area shape="rect" id="node3" href="$classtone.html#aab27a99690337d475f6be5188798c732" title="tone::DoStartPlaying" alt="" coords="175,5,316,35"/>
+<area shape="rect" id="node5" href="$classtone.html#add8491d03d8b82453b42a236b111c02a" title="tone::DoResumeAudio" alt="" coords="168,59,323,88"/>
+<area shape="rect" id="node7" href="$classtone.html#a989956fe95107f983464d2ac01b19211" title="tone::SetFrequency" alt="" coords="177,112,313,141"/>
+</map>

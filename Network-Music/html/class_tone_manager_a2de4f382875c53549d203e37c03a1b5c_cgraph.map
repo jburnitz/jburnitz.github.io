@@ -1,0 +1,5 @@
+<map id="ToneManager::SLOT_InitializeTones" name="ToneManager::SLOT_InitializeTones">
+<area shape="rect" id="node3" href="$class_tone_manager.html#a5145a5a45c5b673c0301550285a04b61" title="ToneManager::AddTone" alt="" coords="264,5,424,35"/>
+<area shape="rect" id="node5" href="$class_tone_manager.html#a350057c72bfef92eafd78fcf663a4780" title="ToneManager::Set_Volume" alt="" coords="255,59,433,88"/>
+<area shape="rect" id="node7" href="$class_tone_manager.html#a9c6253effbaab4dca2b087bc4ab88598" title="ToneManager::Start\l_Audio" alt="" coords="276,111,412,158"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="ToneManager::SLOT_NumberOfTonesChanged" name="ToneManager::SLOT_NumberOfTonesChanged">
+<area shape="rect" id="node3" href="$class_tone_manager.html#a5145a5a45c5b673c0301550285a04b61" title="ToneManager::AddTone" alt="" coords="261,5,421,35"/>
+<area shape="rect" id="node5" href="$class_tone_manager.html#a9c6253effbaab4dca2b087bc4ab88598" title="ToneManager::Start\l_Audio" alt="" coords="273,58,409,105"/>
+<area shape="rect" id="node7" href="$class_tone_manager.html#a350057c72bfef92eafd78fcf663a4780" title="ToneManager::Set_Volume" alt="" coords="252,128,431,157"/>
+<area shape="rect" id="node9" href="$class_tone_manager.html#adef20253e76dd81cb8b730a04a4c611d" title="ToneManager::Resume\l_Audio" alt="" coords="263,181,420,227"/>
+<area shape="rect" id="node11" href="$class_tone_manager.html#a1585c35147c628bffcca0683d87e9275" title="ToneManager::Pause\l_Audio" alt="" coords="268,250,415,297"/>
+</map>

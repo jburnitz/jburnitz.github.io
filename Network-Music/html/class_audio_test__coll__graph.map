@@ -1,0 +1,5 @@
+<map id="AudioTest" name="AudioTest">
+<area shape="rect" id="node2" href="$class_tone_manager.html" title="ToneManager" alt="" coords="5,5,107,35"/>
+<area shape="rect" id="node4" href="$class_audio_graph.html" title="AudioGraph" alt="" coords="131,5,221,35"/>
+<area shape="rect" id="node6" href="$class_packet_capturer.html" title="PacketCapturer" alt="" coords="245,5,357,35"/>
+</map>

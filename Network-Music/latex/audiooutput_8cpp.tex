@@ -1,0 +1,66 @@
+\hypertarget{audiooutput_8cpp}{\section{Network-\/\-Music/audiooutput.cpp File Reference}
+\label{audiooutput_8cpp}\index{Network-\/\-Music/audiooutput.\-cpp@{Network-\/\-Music/audiooutput.\-cpp}}
+}
+{\ttfamily \#include $<$Q\-Audio\-Device\-Info$>$}\\*
+{\ttfamily \#include $<$Q\-Audio\-Output$>$}\\*
+{\ttfamily \#include $<$Q\-Debug$>$}\\*
+{\ttfamily \#include $<$Q\-V\-Box\-Layout$>$}\\*
+{\ttfamily \#include $<$qmath.\-h$>$}\\*
+{\ttfamily \#include $<$qendian.\-h$>$}\\*
+{\ttfamily \#include $<$Q\-Hash$>$}\\*
+{\ttfamily \#include $<$Q\-Thread$>$}\\*
+{\ttfamily \#include $<$pcap.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}audiooutput.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tone.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}packetcapturer.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}tonemanager.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}audiograph.\-h\char`\"{}}\\*
+Include dependency graph for audiooutput.\-cpp\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{audiooutput_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{audiooutput_8cpp_a7a18f02620ad721f668eb718157f11e8}{S\-U\-S\-P\-E\-N\-D\-\_\-\-L\-A\-B\-E\-L}~\char`\"{}Suspend playback\char`\"{}
+\item 
+\#define \hyperlink{audiooutput_8cpp_af266e8e5dfbb807dec167c97f68a3767}{R\-E\-S\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}~\char`\"{}Resume playback\char`\"{}
+\item 
+\#define \hyperlink{audiooutput_8cpp_a4ca48866c33da3c81aec1dfd571f2054}{V\-O\-L\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}~\char`\"{}Volume\-:\char`\"{}
+\item 
+\#define \hyperlink{audiooutput_8cpp_a1be5b24cec173ec08c04dc6faf91c5da}{T\-O\-N\-E\-\_\-\-M\-A\-X}~(15)
+\item 
+\#define \hyperlink{audiooutput_8cpp_a3760582a7103aaa001751069d0d1c1f2}{T\-O\-N\-E\-\_\-\-M\-I\-N}~(3)
+\item 
+\#define \hyperlink{audiooutput_8cpp_a5e6855de8203fe9ae34cf63f68799e98}{T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T}~(5)
+\item 
+\#define \hyperlink{audiooutput_8cpp_ad826826fe755da59dcff55bf092c9ed8}{M\-A\-X\-\_\-\-S\-L\-I\-C\-E\-S}~(10)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{audiooutput_8cpp_ad826826fe755da59dcff55bf092c9ed8}{\index{audiooutput.\-cpp@{audiooutput.\-cpp}!M\-A\-X\-\_\-\-S\-L\-I\-C\-E\-S@{M\-A\-X\-\_\-\-S\-L\-I\-C\-E\-S}}
+\index{M\-A\-X\-\_\-\-S\-L\-I\-C\-E\-S@{M\-A\-X\-\_\-\-S\-L\-I\-C\-E\-S}!audiooutput.cpp@{audiooutput.\-cpp}}
+\subsubsection[{M\-A\-X\-\_\-\-S\-L\-I\-C\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-X\-\_\-\-S\-L\-I\-C\-E\-S~(10)}}\label{audiooutput_8cpp_ad826826fe755da59dcff55bf092c9ed8}
+\hypertarget{audiooutput_8cpp_af266e8e5dfbb807dec167c97f68a3767}{\index{audiooutput.\-cpp@{audiooutput.\-cpp}!R\-E\-S\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L@{R\-E\-S\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}}
+\index{R\-E\-S\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L@{R\-E\-S\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}!audiooutput.cpp@{audiooutput.\-cpp}}
+\subsubsection[{R\-E\-S\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-S\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L~\char`\"{}Resume playback\char`\"{}}}\label{audiooutput_8cpp_af266e8e5dfbb807dec167c97f68a3767}
+\hypertarget{audiooutput_8cpp_a7a18f02620ad721f668eb718157f11e8}{\index{audiooutput.\-cpp@{audiooutput.\-cpp}!S\-U\-S\-P\-E\-N\-D\-\_\-\-L\-A\-B\-E\-L@{S\-U\-S\-P\-E\-N\-D\-\_\-\-L\-A\-B\-E\-L}}
+\index{S\-U\-S\-P\-E\-N\-D\-\_\-\-L\-A\-B\-E\-L@{S\-U\-S\-P\-E\-N\-D\-\_\-\-L\-A\-B\-E\-L}!audiooutput.cpp@{audiooutput.\-cpp}}
+\subsubsection[{S\-U\-S\-P\-E\-N\-D\-\_\-\-L\-A\-B\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-U\-S\-P\-E\-N\-D\-\_\-\-L\-A\-B\-E\-L~\char`\"{}Suspend playback\char`\"{}}}\label{audiooutput_8cpp_a7a18f02620ad721f668eb718157f11e8}
+\hypertarget{audiooutput_8cpp_a5e6855de8203fe9ae34cf63f68799e98}{\index{audiooutput.\-cpp@{audiooutput.\-cpp}!T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T@{T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T}}
+\index{T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T@{T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T}!audiooutput.cpp@{audiooutput.\-cpp}}
+\subsubsection[{T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-N\-E\-\_\-\-C\-O\-U\-N\-T~(5)}}\label{audiooutput_8cpp_a5e6855de8203fe9ae34cf63f68799e98}
+\hypertarget{audiooutput_8cpp_a1be5b24cec173ec08c04dc6faf91c5da}{\index{audiooutput.\-cpp@{audiooutput.\-cpp}!T\-O\-N\-E\-\_\-\-M\-A\-X@{T\-O\-N\-E\-\_\-\-M\-A\-X}}
+\index{T\-O\-N\-E\-\_\-\-M\-A\-X@{T\-O\-N\-E\-\_\-\-M\-A\-X}!audiooutput.cpp@{audiooutput.\-cpp}}
+\subsubsection[{T\-O\-N\-E\-\_\-\-M\-A\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-N\-E\-\_\-\-M\-A\-X~(15)}}\label{audiooutput_8cpp_a1be5b24cec173ec08c04dc6faf91c5da}
+\hypertarget{audiooutput_8cpp_a3760582a7103aaa001751069d0d1c1f2}{\index{audiooutput.\-cpp@{audiooutput.\-cpp}!T\-O\-N\-E\-\_\-\-M\-I\-N@{T\-O\-N\-E\-\_\-\-M\-I\-N}}
+\index{T\-O\-N\-E\-\_\-\-M\-I\-N@{T\-O\-N\-E\-\_\-\-M\-I\-N}!audiooutput.cpp@{audiooutput.\-cpp}}
+\subsubsection[{T\-O\-N\-E\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\-O\-N\-E\-\_\-\-M\-I\-N~(3)}}\label{audiooutput_8cpp_a3760582a7103aaa001751069d0d1c1f2}
+\hypertarget{audiooutput_8cpp_a4ca48866c33da3c81aec1dfd571f2054}{\index{audiooutput.\-cpp@{audiooutput.\-cpp}!V\-O\-L\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L@{V\-O\-L\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}}
+\index{V\-O\-L\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L@{V\-O\-L\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}!audiooutput.cpp@{audiooutput.\-cpp}}
+\subsubsection[{V\-O\-L\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\-O\-L\-U\-M\-E\-\_\-\-L\-A\-B\-E\-L~\char`\"{}Volume\-:\char`\"{}}}\label{audiooutput_8cpp_a4ca48866c33da3c81aec1dfd571f2054}

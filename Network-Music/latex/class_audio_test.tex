@@ -1,0 +1,288 @@
+\hypertarget{class_audio_test}{\section{Audio\-Test Class Reference}
+\label{class_audio_test}\index{Audio\-Test@{Audio\-Test}}
+}
+
+
+{\ttfamily \#include $<$audiooutput.\-h$>$}
+
+
+
+Collaboration diagram for Audio\-Test\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_audio_test__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_audio_test_a97c30aeee89c952e4f9e213d26883da6}{Volume\-Changed} (int)
+\item 
+void \hyperlink{class_audio_test_a44db884ba0eaf1838099d0aeb29a04d6}{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-T\-O\-N\-E\-S} ()
+\item 
+void \hyperlink{class_audio_test_a7f324e3db9ffe815a1c1b3af12e520a5}{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-C\-A\-P\-T\-U\-R\-E} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_audio_test_a086084868d3cadb9b4c8e1a8549425e9}{Audio\-Test} ()
+\item 
+void \hyperlink{class_audio_test_a717dfe69311252d9890838a250946064}{Setup} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_audio_test_a1b80cfb92faf38273d77a908ad1ef803}{initialize\-Window} ()
+\item 
+void \hyperlink{class_audio_test_a80b6f4ce52947f96d9f243cf93d04a46}{initialize\-Audio} ()
+\item 
+void \hyperlink{class_audio_test_a9a38ae87dce3988e4560832475be32ca}{create\-Audio\-Output} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\-Combo\-Box $\ast$ \hyperlink{class_audio_test_a9da9104fab5169ae9016993136b22e2e}{m\-\_\-network\-Device\-Box}
+\item 
+Q\-Label $\ast$ \hyperlink{class_audio_test_a7cc252683f93e389b0783a8b34671665}{m\-\_\-volume\-Label}
+\item 
+Q\-Slider $\ast$ \hyperlink{class_audio_test_a822b1b9f3ac4cd529e90187f713a0eb8}{m\-\_\-volume\-Slider}
+\item 
+Q\-Slider $\ast$ \hyperlink{class_audio_test_ab5999227ac75e0ecd7012e331ca36b2f}{m\-\_\-frequency\-Slider}
+\item 
+Q\-Spin\-Box $\ast$ \hyperlink{class_audio_test_a845de1a2a2a6502d3e62dc6b2a7dae90}{m\-\_\-number\-Of\-Tones}
+\item 
+Q\-Label $\ast$ \hyperlink{class_audio_test_a8c2e8d20ea6734c144cc2dac5c88a69e}{m\-\_\-number\-Of\-Tones\-Label}
+\item 
+Q\-Spin\-Box $\ast$ \hyperlink{class_audio_test_a8ba597a8a62383d03f58710261771d4f}{m\-\_\-base\-Frequency}
+\item 
+Q\-Label $\ast$ \hyperlink{class_audio_test_aab2b89738ef1f45c6e00387a54bdbfba}{m\-\_\-base\-Frequency\-Label}
+\item 
+Q\-Status\-Bar $\ast$ \hyperlink{class_audio_test_a272651cef1e35ba3dae5bb3adffb5d76}{m\-\_\-status\-Bar}
+\item 
+Q\-Label $\ast$ \hyperlink{class_audio_test_aaefe5dd3c1527190784ab1bfdc5abb22}{m\-\_\-status\-Bar\-Label}
+\item 
+Q\-Pie\-Series $\ast$ \hyperlink{class_audio_test_a15e0d2b3243a7fa77753963084e23424}{series}
+\item 
+Q\-Chart $\ast$ \hyperlink{class_audio_test_acb4bb7befffd173d60885148b403d2fc}{chart}
+\item 
+Q\-Chart\-View $\ast$ \hyperlink{class_audio_test_ac525335560da38c3d9a945f52d5c664f}{chart\-View}
+\item 
+Q\-Hash$<$ int, Q\-Pie\-Slice $\ast$ $>$ \hyperlink{class_audio_test_ab57b7deedbfb197745c28092e5c44fe7}{slices}
+\item 
+\hyperlink{class_audio_graph}{Audio\-Graph} $\ast$ \hyperlink{class_audio_test_a96804bbcebef3ac9a5c2ce73d8ac2847}{audio\-Graph}
+\item 
+Q\-Main\-Window $\ast$ \hyperlink{class_audio_test_af8f82fce5f5878c15a0c52e72a329f4c}{audio\-Graph\-Window}
+\item 
+Q\-String $\ast$ \hyperlink{class_audio_test_ac3f219c06b8fc68e769c52a0caba3c4a}{m\-\_\-status\-Bar\-Label\-String}
+\item 
+\hyperlink{class_tone_manager}{Tone\-Manager} $\ast$ \hyperlink{class_audio_test_a3f926ca4bd5cd5a38794db6b85a832dd}{tone\-Manager}
+\item 
+Q\-Thread $\ast$ \hyperlink{class_audio_test_a9c61f6a4dd4d0a6947d2a1a52d9df431}{Tone\-Manager\-Thread}
+\item 
+Q\-Thread $\ast$ \hyperlink{class_audio_test_a1b07f5dd6e72a10b27065593c2b4adca}{Packet\-Capture\-Thread}
+\item 
+\hyperlink{class_packet_capturer}{Packet\-Capturer} $\ast$ \hyperlink{class_audio_test_a799c4ca17167556b33a0e863278717c0}{pk}
+\item 
+int \hyperlink{class_audio_test_ae13d28e386d8b95cf2760194a3cee9cc}{current\-Tone}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_audio_test_a086084868d3cadb9b4c8e1a8549425e9}{\index{Audio\-Test@{Audio\-Test}!Audio\-Test@{Audio\-Test}}
+\index{Audio\-Test@{Audio\-Test}!AudioTest@{Audio\-Test}}
+\subsubsection[{Audio\-Test}]{\setlength{\rightskip}{0pt plus 5cm}Audio\-Test\-::\-Audio\-Test (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_audio_test_a086084868d3cadb9b4c8e1a8549425e9}
+Controller class that manages the tone players and receives input from pcap 
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_test_a086084868d3cadb9b4c8e1a8549425e9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_audio_test_a9a38ae87dce3988e4560832475be32ca}{\index{Audio\-Test@{Audio\-Test}!create\-Audio\-Output@{create\-Audio\-Output}}
+\index{create\-Audio\-Output@{create\-Audio\-Output}!AudioTest@{Audio\-Test}}
+\subsubsection[{create\-Audio\-Output}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Test\-::create\-Audio\-Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a9a38ae87dce3988e4560832475be32ca}
+\hypertarget{class_audio_test_a80b6f4ce52947f96d9f243cf93d04a46}{\index{Audio\-Test@{Audio\-Test}!initialize\-Audio@{initialize\-Audio}}
+\index{initialize\-Audio@{initialize\-Audio}!AudioTest@{Audio\-Test}}
+\subsubsection[{initialize\-Audio}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Test\-::initialize\-Audio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a80b6f4ce52947f96d9f243cf93d04a46}
+\hypertarget{class_audio_test_a1b80cfb92faf38273d77a908ad1ef803}{\index{Audio\-Test@{Audio\-Test}!initialize\-Window@{initialize\-Window}}
+\index{initialize\-Window@{initialize\-Window}!AudioTest@{Audio\-Test}}
+\subsubsection[{initialize\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Test\-::initialize\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a1b80cfb92faf38273d77a908ad1ef803}
+\begin{DoxyAttention}{Attention}
+Consider moving this device finding to a non-\/graphical context 
+\end{DoxyAttention}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_test_a1b80cfb92faf38273d77a908ad1ef803_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_audio_test_a717dfe69311252d9890838a250946064}{\index{Audio\-Test@{Audio\-Test}!Setup@{Setup}}
+\index{Setup@{Setup}!AudioTest@{Audio\-Test}}
+\subsubsection[{Setup}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Test\-::\-Setup (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_audio_test_a717dfe69311252d9890838a250946064}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_audio_test_a717dfe69311252d9890838a250946064_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_audio_test_a717dfe69311252d9890838a250946064_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_audio_test_a7f324e3db9ffe815a1c1b3af12e520a5}{\index{Audio\-Test@{Audio\-Test}!S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-C\-A\-P\-T\-U\-R\-E@{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-C\-A\-P\-T\-U\-R\-E}}
+\index{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-C\-A\-P\-T\-U\-R\-E@{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-C\-A\-P\-T\-U\-R\-E}!AudioTest@{Audio\-Test}}
+\subsubsection[{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-C\-A\-P\-T\-U\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Test\-::\-S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-C\-A\-P\-T\-U\-R\-E (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_audio_test_a7f324e3db9ffe815a1c1b3af12e520a5}
+\hypertarget{class_audio_test_a44db884ba0eaf1838099d0aeb29a04d6}{\index{Audio\-Test@{Audio\-Test}!S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-T\-O\-N\-E\-S@{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-T\-O\-N\-E\-S}}
+\index{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-T\-O\-N\-E\-S@{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-T\-O\-N\-E\-S}!AudioTest@{Audio\-Test}}
+\subsubsection[{S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-T\-O\-N\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Test\-::\-S\-I\-G\-N\-A\-L\-\_\-\-B\-E\-G\-I\-N\-\_\-\-T\-O\-N\-E\-S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_audio_test_a44db884ba0eaf1838099d0aeb29a04d6}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_test_a44db884ba0eaf1838099d0aeb29a04d6_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_audio_test_a97c30aeee89c952e4f9e213d26883da6}{\index{Audio\-Test@{Audio\-Test}!Volume\-Changed@{Volume\-Changed}}
+\index{Volume\-Changed@{Volume\-Changed}!AudioTest@{Audio\-Test}}
+\subsubsection[{Volume\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Audio\-Test\-::\-Volume\-Changed (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_audio_test_a97c30aeee89c952e4f9e213d26883da6}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_audio_test_a96804bbcebef3ac9a5c2ce73d8ac2847}{\index{Audio\-Test@{Audio\-Test}!audio\-Graph@{audio\-Graph}}
+\index{audio\-Graph@{audio\-Graph}!AudioTest@{Audio\-Test}}
+\subsubsection[{audio\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Audio\-Graph}$\ast$ Audio\-Test\-::audio\-Graph\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a96804bbcebef3ac9a5c2ce73d8ac2847}
+\hypertarget{class_audio_test_af8f82fce5f5878c15a0c52e72a329f4c}{\index{Audio\-Test@{Audio\-Test}!audio\-Graph\-Window@{audio\-Graph\-Window}}
+\index{audio\-Graph\-Window@{audio\-Graph\-Window}!AudioTest@{Audio\-Test}}
+\subsubsection[{audio\-Graph\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Main\-Window$\ast$ Audio\-Test\-::audio\-Graph\-Window\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_af8f82fce5f5878c15a0c52e72a329f4c}
+\hypertarget{class_audio_test_acb4bb7befffd173d60885148b403d2fc}{\index{Audio\-Test@{Audio\-Test}!chart@{chart}}
+\index{chart@{chart}!AudioTest@{Audio\-Test}}
+\subsubsection[{chart}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Chart$\ast$ Audio\-Test\-::chart\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_acb4bb7befffd173d60885148b403d2fc}
+\hypertarget{class_audio_test_ac525335560da38c3d9a945f52d5c664f}{\index{Audio\-Test@{Audio\-Test}!chart\-View@{chart\-View}}
+\index{chart\-View@{chart\-View}!AudioTest@{Audio\-Test}}
+\subsubsection[{chart\-View}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Chart\-View$\ast$ Audio\-Test\-::chart\-View\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_ac525335560da38c3d9a945f52d5c664f}
+\hypertarget{class_audio_test_ae13d28e386d8b95cf2760194a3cee9cc}{\index{Audio\-Test@{Audio\-Test}!current\-Tone@{current\-Tone}}
+\index{current\-Tone@{current\-Tone}!AudioTest@{Audio\-Test}}
+\subsubsection[{current\-Tone}]{\setlength{\rightskip}{0pt plus 5cm}int Audio\-Test\-::current\-Tone\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_ae13d28e386d8b95cf2760194a3cee9cc}
+\hypertarget{class_audio_test_a8ba597a8a62383d03f58710261771d4f}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-base\-Frequency@{m\-\_\-base\-Frequency}}
+\index{m\-\_\-base\-Frequency@{m\-\_\-base\-Frequency}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-base\-Frequency}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Spin\-Box$\ast$ Audio\-Test\-::m\-\_\-base\-Frequency\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a8ba597a8a62383d03f58710261771d4f}
+\hypertarget{class_audio_test_aab2b89738ef1f45c6e00387a54bdbfba}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-base\-Frequency\-Label@{m\-\_\-base\-Frequency\-Label}}
+\index{m\-\_\-base\-Frequency\-Label@{m\-\_\-base\-Frequency\-Label}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-base\-Frequency\-Label}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Label$\ast$ Audio\-Test\-::m\-\_\-base\-Frequency\-Label\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_aab2b89738ef1f45c6e00387a54bdbfba}
+\hypertarget{class_audio_test_ab5999227ac75e0ecd7012e331ca36b2f}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-frequency\-Slider@{m\-\_\-frequency\-Slider}}
+\index{m\-\_\-frequency\-Slider@{m\-\_\-frequency\-Slider}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-frequency\-Slider}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Slider$\ast$ Audio\-Test\-::m\-\_\-frequency\-Slider\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_ab5999227ac75e0ecd7012e331ca36b2f}
+\hypertarget{class_audio_test_a9da9104fab5169ae9016993136b22e2e}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-network\-Device\-Box@{m\-\_\-network\-Device\-Box}}
+\index{m\-\_\-network\-Device\-Box@{m\-\_\-network\-Device\-Box}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-network\-Device\-Box}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Combo\-Box$\ast$ Audio\-Test\-::m\-\_\-network\-Device\-Box\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a9da9104fab5169ae9016993136b22e2e}
+\hypertarget{class_audio_test_a845de1a2a2a6502d3e62dc6b2a7dae90}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-number\-Of\-Tones@{m\-\_\-number\-Of\-Tones}}
+\index{m\-\_\-number\-Of\-Tones@{m\-\_\-number\-Of\-Tones}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-number\-Of\-Tones}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Spin\-Box$\ast$ Audio\-Test\-::m\-\_\-number\-Of\-Tones\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a845de1a2a2a6502d3e62dc6b2a7dae90}
+\hypertarget{class_audio_test_a8c2e8d20ea6734c144cc2dac5c88a69e}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-number\-Of\-Tones\-Label@{m\-\_\-number\-Of\-Tones\-Label}}
+\index{m\-\_\-number\-Of\-Tones\-Label@{m\-\_\-number\-Of\-Tones\-Label}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-number\-Of\-Tones\-Label}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Label$\ast$ Audio\-Test\-::m\-\_\-number\-Of\-Tones\-Label\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a8c2e8d20ea6734c144cc2dac5c88a69e}
+\hypertarget{class_audio_test_a272651cef1e35ba3dae5bb3adffb5d76}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-status\-Bar@{m\-\_\-status\-Bar}}
+\index{m\-\_\-status\-Bar@{m\-\_\-status\-Bar}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-status\-Bar}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Status\-Bar$\ast$ Audio\-Test\-::m\-\_\-status\-Bar\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a272651cef1e35ba3dae5bb3adffb5d76}
+\hypertarget{class_audio_test_aaefe5dd3c1527190784ab1bfdc5abb22}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-status\-Bar\-Label@{m\-\_\-status\-Bar\-Label}}
+\index{m\-\_\-status\-Bar\-Label@{m\-\_\-status\-Bar\-Label}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-status\-Bar\-Label}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Label$\ast$ Audio\-Test\-::m\-\_\-status\-Bar\-Label\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_aaefe5dd3c1527190784ab1bfdc5abb22}
+\hypertarget{class_audio_test_ac3f219c06b8fc68e769c52a0caba3c4a}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-status\-Bar\-Label\-String@{m\-\_\-status\-Bar\-Label\-String}}
+\index{m\-\_\-status\-Bar\-Label\-String@{m\-\_\-status\-Bar\-Label\-String}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-status\-Bar\-Label\-String}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String$\ast$ Audio\-Test\-::m\-\_\-status\-Bar\-Label\-String\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_ac3f219c06b8fc68e769c52a0caba3c4a}
+\hypertarget{class_audio_test_a7cc252683f93e389b0783a8b34671665}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-volume\-Label@{m\-\_\-volume\-Label}}
+\index{m\-\_\-volume\-Label@{m\-\_\-volume\-Label}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-volume\-Label}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Label$\ast$ Audio\-Test\-::m\-\_\-volume\-Label\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a7cc252683f93e389b0783a8b34671665}
+\hypertarget{class_audio_test_a822b1b9f3ac4cd529e90187f713a0eb8}{\index{Audio\-Test@{Audio\-Test}!m\-\_\-volume\-Slider@{m\-\_\-volume\-Slider}}
+\index{m\-\_\-volume\-Slider@{m\-\_\-volume\-Slider}!AudioTest@{Audio\-Test}}
+\subsubsection[{m\-\_\-volume\-Slider}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Slider$\ast$ Audio\-Test\-::m\-\_\-volume\-Slider\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a822b1b9f3ac4cd529e90187f713a0eb8}
+\hypertarget{class_audio_test_a1b07f5dd6e72a10b27065593c2b4adca}{\index{Audio\-Test@{Audio\-Test}!Packet\-Capture\-Thread@{Packet\-Capture\-Thread}}
+\index{Packet\-Capture\-Thread@{Packet\-Capture\-Thread}!AudioTest@{Audio\-Test}}
+\subsubsection[{Packet\-Capture\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Thread$\ast$ Audio\-Test\-::\-Packet\-Capture\-Thread\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a1b07f5dd6e72a10b27065593c2b4adca}
+\hypertarget{class_audio_test_a799c4ca17167556b33a0e863278717c0}{\index{Audio\-Test@{Audio\-Test}!pk@{pk}}
+\index{pk@{pk}!AudioTest@{Audio\-Test}}
+\subsubsection[{pk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Packet\-Capturer}$\ast$ Audio\-Test\-::pk\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a799c4ca17167556b33a0e863278717c0}
+\hypertarget{class_audio_test_a15e0d2b3243a7fa77753963084e23424}{\index{Audio\-Test@{Audio\-Test}!series@{series}}
+\index{series@{series}!AudioTest@{Audio\-Test}}
+\subsubsection[{series}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Pie\-Series$\ast$ Audio\-Test\-::series\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a15e0d2b3243a7fa77753963084e23424}
+\hypertarget{class_audio_test_ab57b7deedbfb197745c28092e5c44fe7}{\index{Audio\-Test@{Audio\-Test}!slices@{slices}}
+\index{slices@{slices}!AudioTest@{Audio\-Test}}
+\subsubsection[{slices}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Hash$<$int, Q\-Pie\-Slice$\ast$$>$ Audio\-Test\-::slices\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_ab57b7deedbfb197745c28092e5c44fe7}
+\hypertarget{class_audio_test_a3f926ca4bd5cd5a38794db6b85a832dd}{\index{Audio\-Test@{Audio\-Test}!tone\-Manager@{tone\-Manager}}
+\index{tone\-Manager@{tone\-Manager}!AudioTest@{Audio\-Test}}
+\subsubsection[{tone\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tone\-Manager}$\ast$ Audio\-Test\-::tone\-Manager\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a3f926ca4bd5cd5a38794db6b85a832dd}
+\hypertarget{class_audio_test_a9c61f6a4dd4d0a6947d2a1a52d9df431}{\index{Audio\-Test@{Audio\-Test}!Tone\-Manager\-Thread@{Tone\-Manager\-Thread}}
+\index{Tone\-Manager\-Thread@{Tone\-Manager\-Thread}!AudioTest@{Audio\-Test}}
+\subsubsection[{Tone\-Manager\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Thread$\ast$ Audio\-Test\-::\-Tone\-Manager\-Thread\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_audio_test_a9c61f6a4dd4d0a6947d2a1a52d9df431}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Network-\/\-Music/\hyperlink{audiooutput_8h}{audiooutput.\-h}\item 
+Network-\/\-Music/\hyperlink{audiooutput_8cpp}{audiooutput.\-cpp}\end{DoxyCompactItemize}
